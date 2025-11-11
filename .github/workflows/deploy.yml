@@ -1,0 +1,23 @@
+name: Deploy to Somee
+
+on:
+  push:
+    branches:
+      - master # Or your main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Somee via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0 # Or another suitable FTP/SFTP action
+        with:
+          server: galacticcinema.somee.com
+          username: Khuong
+          password: K.khuong1470
+          local-dir: publish/ # Or the directory containing your build artifacts
+          server-dir: /www.GalacticCinema.somee.com # Or your specific target directory on Somee
+          # Optional: Add other parameters like `protocol: sftp`, `port`, `exclude`, etc.
