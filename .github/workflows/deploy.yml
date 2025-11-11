@@ -19,6 +19,6 @@ jobs:
           server: ftp://GalacticCinema.somee.com       # FTP host của bạn
           username: Khuong          # Tên đăng nhập FTP (đặt trong GitHub Secrets)
           password: K.khuong1470          # Mật khẩu FTP (đặt trong GitHub Secrets)
-          server-dir: /www.GalacticCinema.somee.com/   # Thư mục chứa web trên Somee
+          server-dir: www.GalacticCinema.somee.com/   # Thư mục chứa web trên Somee
           local-dir: ./                                  # Thư mục chứa file HTML cần upload
           dangerous-clean-slate: false                   # Không xoá toàn bộ file cũ (để an toàn)
