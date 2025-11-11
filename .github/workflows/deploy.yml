@@ -19,5 +19,5 @@ jobs:
           username: Khuong
           password: K.khuong1470
           local-dir: publish/ # Or the directory containing your build artifacts
-          server-dir: /www.GalacticCinema.somee.com # Or your specific target directory on Somee
+          server-dir: www.GalacticCinema.somee.com/ # Or your specific target directory on Somee
           # Optional: Add other parameters like `protocol: sftp`, `port`, `exclude`, etc.
