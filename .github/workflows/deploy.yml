@@ -16,7 +16,7 @@ jobs:
       - name: 📤 Deploy via FTP to Somee
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp://GalacticCinema.somee.com       # FTP host của bạn
+          server: GalacticCinema.somee.com       # FTP host của bạn
           username: Khuong          # Tên đăng nhập FTP (đặt trong GitHub Secrets)
           password: K.khuong1470          # Mật khẩu FTP (đặt trong GitHub Secrets)
           server-dir: www.GalacticCinema.somee.com/   # Thư mục chứa web trên Somee
