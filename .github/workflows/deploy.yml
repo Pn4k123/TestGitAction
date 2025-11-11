@@ -1,23 +1,24 @@
-name: Deploy to Somee
+name: 🚀 Deploy to Somee
 
 on:
   push:
     branches:
-      - master # Or your main branch
+      - master   # Chạy khi push lên nhánh main (bạn có thể đổi sang nhánh khác)
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: 🧩 Checkout source code
         uses: actions/checkout@v4
 
-      - name: Deploy to Somee via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.0 # Or another suitable FTP/SFTP action
+      - name: 📤 Deploy via FTP to Somee
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: galacticcinema.somee.com
-          username: Khuong
-          password: K.khuong1470
-          local-dir: publish/ # Or the directory containing your build artifacts
-          server-dir: www.GalacticCinema.somee.com/ # Or your specific target directory on Somee
-          # Optional: Add other parameters like `protocol: sftp`, `port`, `exclude`, etc.
+          server: ftp://GalacticCinema.somee.com       # FTP host của bạn
+          username: Khuong          # Tên đăng nhập FTP (đặt trong GitHub Secrets)
+          password: K.khuong1470          # Mật khẩu FTP (đặt trong GitHub Secrets)
+          server-dir: /www.GalacticCinema.somee.com/   # Thư mục chứa web trên Somee
+          local-dir: ./                                  # Thư mục chứa file HTML cần upload
+          dangerous-clean-slate: false                   # Không xoá toàn bộ file cũ (để an toàn)
